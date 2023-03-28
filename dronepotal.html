@@ -5,8 +5,194 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    /*상단로고*/
+    #logo_wrap {height:100px;display:flex;justify-content:center;align-items:center;}
+    /*상단 메뉴*/
+    nav{
+    	font-size: 12pt;
+    	font-family: 'PT Sans', Arial, Sans-serif;
+    	position: relative;
+    }
+    nav ul{
+    	padding: 0;
+    	margin: 0 auto;
+    	width: auto;
+    }
+    nav li{
+    }
+    nav a{
+    	line-height: 50px;
+      height: 50px;
+    }
+    nav li a{
+    	box-sizing: border-box;
+    	-moz-box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
+    }
+    nav li:last-child a{
+    	border-right: 0;
+        }
+    nav a:hover, nav a:active{
+    }
+    nav a#pull{
+    	display: none;
+    }
+      html {
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+      }
+
+      ul{
+        /*list-style-type: none;*/
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        text-align: center;
+      }
+      li{
+        /*position: relative;*/
+        display: inline-block;
+      }
+      li a{
+        color: #FFFFFF;
+        text-align: center;
+        padding: 14.5px 16px;
+        text-decoration: none;
+      }
+      li a:hover{
+        /*color: #597812;*/
+        color: #FFD400;
+        font-weight:normal;
+      }
+      .menu {
+       width: 5000px;
+       height: 50px;
+       text-align: center;
+       max-width: 100%;
+       background-position: center;
+       background-size: cover;
+       background-color: #333333;color: white;
+       position: absolute;z-index: 1;
+     }
+     /*광고 슬라이드*/
+     .Slidesbackground {
+    margin: 0;
+    padding: 0;
+
+}
+.slideshow-image{
+    border-radius:3%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mySlides {
+    border-radius:3%;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+    </style>
 </head>
 <body>
-    <h1>drone community</h1>
+    
+<!--상단로고-->
+<div id='head'>
+	<div id='logo_wrap'>
+        <a href="http://127.0.0.1:5500/droneproject/dronepotal.html#">
+		<img src='/droneimages/dronelogo6-1.png'>
+    </a>
+	</div>
+</div>
+<!--메뉴-->
+<body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" style="background-color:#F6F6F6">
+    <div class="menu" >
+      <nav class="clearfix">
+        <ul class="clearfix">
+          <li><a href="http://127.0.0.1:5500/droneproject/dronepotal.html#">Home</a></li> <!--""<-여기 부분에 URL 작성하면 됨-->
+          <li><a href="http://www._____.com/About">announcement</a></li>
+          <li><a href="http://www._____.com/Project">community</a></li>
+          <li><a href="http://www._____.com/Travel">certificate</a></li>
+          <li><a href="http://www._____.com/Contact">Aviation related</a></li>
+      </ul>
+      <a id="pull" href="#"></a>
+    </nav>
+    </div>
+  </body>
+  <!--광고 슬라이드-->
+  <div class="slides" style="background-color: #A4A4A4;">
+  <span class="slideshow-container">
+    <div class="Slidesbackground">
+       <div class="mySlides fade">
+       <img src="/droneimages/MQ-9_Reaper_UAV_(cropped).jpg" class="slideshow-image">
+       </div>
+       <div class="mySlides fade">
+           <img src="/droneimages/remotecontroller.jpg" class="slideshow-image">
+       </div>
+       <div class="mySlides fade">
+           <img src="/droneimages/mavic3.jpg" class="slideshow-image">
+       </div>
+       <div class="mySlides fade">
+           <img src="/droneimages/inspire1.jpg" class="slideshow-image">
+       </div>
+       <div class="mySlides fade">
+           <img src="/droneimages/panthom.jpg" class="slideshow-image">
+       </div>
+       <div class="mySlides fade">
+           <img src="/droneimages/m600.jpg" class="slideshow-image">
+       </div>
+   </div>
+</span>
+</div>
+<div class="" style="background-color: black;">
+
+</div>
+   <script>
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+       
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
+    
+        setTimeout(showSlides, 2000); // 2초마다 이미지가 체인지됩니다
+    }
+   </script>
 </body>
 </html>
