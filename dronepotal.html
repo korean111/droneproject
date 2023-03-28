@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        
     /*상단로고*/
     #logo_wrap {height:100px;display:flex;justify-content:center;align-items:center;}
     /*상단 메뉴*/
@@ -118,6 +119,22 @@
         opacity: 1
     }
 }
+/*하단*/
+#pp {
+  text-align : center;
+}
+/*하단 배너 고정*/
+#wrapper{
+  height: auto;
+  min-height: 100%;
+  padding-bottom: (footer높이);
+}
+footer{
+  height: (footer높이);
+  position : relative;
+  transform : translateY(-100%);
+}
+
     </style>
 </head>
 <body>
@@ -170,9 +187,32 @@
    </div>
 </span>
 </div>
-<div class="" style="background-color: black;">
 
+<!--하단 배너-->
+<div class="fnb">
+    <ul>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">게시판</a></li>
+    </ul>
 </div>
+<div id='wrapper'>
+    <div>
+<div class="fnb">
+    <ul>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">이용약관</a></li>
+    </ul>
+</div>
+<div class="finfo" style="background-color: #000000;">
+    <p id="pp" style="color: #FFFFFF;">(주)드론커뮤니티</p>				
+    <p id="pp" style="color: #FFFFFF;"><span>대표</span>: 김우성</p>                            
+    <p id="pp" style="color: #FFFFFF;">충남 천안 어딘가</p>
+    <p id="pp" style="color: #FFFFFF;"><span>고객센터</span>:010-8722-7317</p>
+    <p id="pp" style="color: #FFFFFF;">개인정보보호책임자 : 김우성 (korean5494@gmail.com)</p>
+</div>
+</div>
+</div>
+<footer></footer>
    <script>
 
     var slideIndex = 0;
